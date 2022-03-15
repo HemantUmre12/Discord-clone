@@ -424,6 +424,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.nav-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  display: flex;
+  height: 100vh;
+  width: 4rem;
+  flex-direction: column;
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 34 37 / var(--tw-bg-opacity));
+  padding: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(227 229 232 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .sidebar-icon {
   position: relative;
   margin-left: auto;
@@ -483,46 +501,198 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 100ms;
 }
-.fixed {
-  position: fixed;
-}
-.top-0 {
-  top: 0px;
-}
-.left-0 {
-  left: 0px;
-}
-.m-0 {
+/* Channesl section */
+.channel-bar {
   margin: 0px;
+  margin-left: 4rem;
+  height: 100vh;
+  width: 15rem;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 237 239 / var(--tw-bg-opacity));
 }
+@media (prefers-color-scheme: dark) {
+
+  .channel-bar {
+    --tw-bg-opacity: 1;
+    background-color: rgb(47 49 54 / var(--tw-bg-opacity));
+  }
+}
+.channel-container {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.25rem;
+}
+.channel-block {
+  margin: 0px;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+.channel-block-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: 1rem;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(79 84 92 / var(--tw-text-opacity));
+}
+@media (prefers-color-scheme: dark) {
+
+  .channel-block-text {
+    --tw-text-opacity: 1;
+    color: rgb(212 215 220 / var(--tw-text-opacity));
+  }
+}
+.dropdown {
+  margin: 0px;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dropdown-header {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.dropdown-header-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+  --tw-text-opacity: 0.9;
+}
+.dropdown-header-text-selected {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  --tw-text-opacity: 0.9;
+}
+.dropdown-selection {
+  margin-top: 0.25rem;
+  margin-right: auto;
+  margin-left: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dropdown-selection-hide {
+  display: none;
+}
+.dropdown-selection-text {
+  margin-right: auto;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dropdown-selection-text:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+.plus-sign {
+  margin-left: auto;
+  cursor: pointer;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.plus-sign:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+.arrow-sign-click {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.arrow-sign {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.25rem;
+  --tw-text-opacity: 0.8;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.arrow-sign:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
 .flex {
   display: flex;
 }
-.h-screen {
-  height: 100vh;
+
+.p-1 {
+  padding: 0.25rem;
 }
-.w-16 {
-  width: 4rem;
-}
-.flex-col {
-  flex-direction: column;
-}
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 34 37 / var(--tw-bg-opacity));
-}
-.p-0 {
-  padding: 0px;
-}
-.text-gray-300 {
+
+.text-gray-400 {
   --tw-text-opacity: 1;
-  color: rgb(227 229 232 / var(--tw-text-opacity));
+  color: rgb(212 215 220 / var(--tw-text-opacity));
 }
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+
+  ::-webkit-scrollbar-thumb {
+    --tw-bg-opacity: 1;
+    background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+  }
+}
+
 .group:hover .group-hover\:scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
