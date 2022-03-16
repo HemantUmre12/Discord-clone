@@ -67,6 +67,17 @@ const closeDropDown = (par, icon) => {
 
 const addPointingEvent = () => {
   arrowSign.forEach((e) => {
+    e.classList.remove("cancel-hover");
+  })
+  plusSign.forEach((e) => {
+    e.classList.remove("cancel-hover");
+  })
+}
+
+// Add and remove pointing event
+
+const removePointingEvent = () => {
+  arrowSign.forEach((e) => {
     e.classList.add("cancel-hover");
   })
   plusSign.forEach((e) => {
@@ -74,33 +85,25 @@ const addPointingEvent = () => {
   })
 }
 
-const removePointingEvent = () => {
-  arrowSign.forEach((e) => {
-    e.classList.remove("cancel-hover");
-  })
-  plusSign.forEach((e) => {
-    e.classList.remove("cancel-hover");
-  })
-}
+// toggle plus rotate
 
 plusSign.forEach((plus) => {
   plus.addEventListener("click", () => {
     const par = plus.parentElement.parentElement;
     const arrow = plus.parentElement.querySelector(".arrow-sign");
+    plus.classList.add("plus-sign-click");
     openDropDown(par, arrow);
     removePointingEvent();
     const addHashtag = par.querySelector(".add-hashtag");
     const input = addHashtag.querySelector(".input-hashtag");
-    // Show input
     addHashtag.classList.remove("hide");
-    // Focus on input
     input.focus();
-    // When press enter
     addHashtag.addEventListener("keypress", (e) => {
       if (e.key == "Enter") {
         extractNewHashtag(input, addHashtag);
         clearInput(input, addHashtag);
         addPointingEvent();
+        plus.classList.remove("plus-sign-click");
       }
     });
   });
