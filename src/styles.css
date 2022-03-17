@@ -6,13 +6,18 @@
   /* ! Nav Bar */
 
   .nav-container {
-    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col shadow-lg bg-gray-900 text-gray-300;
+    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col z-10 shadow-lg bg-gray-900 text-gray-300;
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-800 text-green-500
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 text-xl mx-auto shadow-lg bg-gray-800 text-green-500
         hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl
         transition-all duration-300 ease-linear;
+  }
+
+  .rotate-arrow {
+    @apply rotate-180
+    bg-green-600 text-white;
   }
 
   .sidebar-tooltip {
@@ -22,8 +27,12 @@
   /* ! Channesl section */
 
   .channel-bar {
-    @apply w-60 h-screen m-0 ml-16 bg-gray-200 dark:bg-gray-800
-     overflow-hidden;
+    @apply w-60 h-screen m-0 ml-16 bg-gray-200 dark:bg-gray-800 fixed transition-all -translate-x-full origin-left duration-300
+    z-[-1] overflow-hidden;
+  }
+
+  .channel-bar-show {
+    @apply translate-x-0;
   }
 
   .channel-container {
@@ -102,6 +111,56 @@
 
   .cancel-hover {
     @apply pointer-events-none;
+  }
+
+  /* Top Navigation */
+
+  .top-navigation {
+    @apply flex flex-row items-center justify-evenly 
+    bg-gray-300 relative
+    transition-all duration-300 -z-10
+    h-16
+    ml-16 sm:ml-[19rem]
+    shadow-lg;
+  }
+
+  .nav-icon {
+    @apply text-gray-500
+    mr-3 ml-4 text-xl
+    transition duration-300 ease-in-out 
+    hover:text-pink-400 
+    cursor-pointer;
+  }
+
+  .nav-icon:first {
+    @apply ml-auto mr-4;
+  }
+
+  .title-hashtag {
+    @apply text-lg tracking-wider font-semibold text-gray-500 
+    ml-2 my-auto;
+  }
+
+  .title-text {
+    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
+    mr-auto ml-2 my-auto 
+    transition duration-300 ease-in-out;
+  }
+
+  .search {
+    @apply w-1/5 flex items-center justify-start 
+    bg-gray-400
+    text-gray-500
+    px-2 h-9 ml-0 mr-0 
+    rounded-md shadow-md
+    transition duration-300 ease-in-out;
+  }
+
+  .search-input {
+    @apply w-full font-sans font-semibold
+    bg-transparent outline-none 
+    text-gray-500  placeholder-gray-500
+    pl-1 rounded;
   }
 
 }

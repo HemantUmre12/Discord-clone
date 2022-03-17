@@ -10,7 +10,9 @@
       src="https://kit.fontawesome.com/d6b2386b70.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script defer src="./app.js"></script> -->
+    <!-- script -->
+    <script src="./app/channels.js" type="module" defer></script>
+    <script src="./app/show-channels.js" type="module" defer></script>
   </head>
 
   <body>
@@ -21,9 +23,9 @@
 
       <div class="side-bar">
         <div class="nav-container">
-          <div class="sidebar-icon group">
-            <i class="fa-solid fa-poo"></i>
-            <span class="sidebar-tooltip group-hover:scale-100">Poo💡</span>
+          <div class="sidebar-icon group sm:hidden channel-arrow">
+            <i class="fa-solid fa-angles-left"></i>
+            <!-- <span class="sidebar-tooltip group-hover:scale-100">Open💡</span> -->
           </div>
           <div class="sidebar-icon group">
             <i class="fa-solid fa-fire-flame-curved"></i>
@@ -37,11 +39,15 @@
             <i class="fa-solid fa-plus"></i>
             <span class="sidebar-tooltip group-hover:scale-100">Plus💡</span>
           </div>
+          <div class="sidebar-icon group">
+            <i class="fa-solid fa-gear"></i>
+            <span class="sidebar-tooltip group-hover:scale-100">Setting💡</span>
+          </div>
         </div>
       </div>
 
       <!-- ! Channels -->
-      <div class="channel-bar shadow-lg">
+      <div class="channel-bar shadow-lg sm:translate-x-0">
         <div class="channel-block">
           <h5 class="channel-block-text">Channels</h5>
         </div>
@@ -52,7 +58,6 @@
           <!-- Topics -->
 
           <div class="dropdown">
-
             <div class="dropdown-header" data-id="0">
               <i class="fa-solid fa-chevron-down arrow-sign"></i>
               <h5 class="dropdown-header-text">Topics 🤓</h5>
@@ -64,13 +69,11 @@
               <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
               <input type="text" class="input-hashtag" />
             </div>
-
           </div>
 
           <!-- Questions -->
 
           <div class="dropdown">
-
             <div class="dropdown-header" data-id="1">
               <i class="fa-solid fa-chevron-down arrow-sign"></i>
               <h5 class="dropdown-header-text">Doubts 🤔</h5>
@@ -80,15 +83,13 @@
             <!-- Added new dropdown-selection -->
             <div class="add-hashtag hide">
               <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
-              <input type="text" class="input-hashtag"/>
+              <input type="text" class="input-hashtag" />
             </div>
-
           </div>
 
           <!-- Maths -->
 
           <div class="dropdown">
-
             <div class="dropdown-header" data-id="2">
               <i class="fa-solid fa-chevron-down arrow-sign"></i>
               <h5 class="dropdown-header-text">Maths 🤮</h5>
@@ -99,14 +100,32 @@
               <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
               <input type="text" class="input-hashtag" />
             </div>
-
           </div>
         </div>
       </div>
     </div>
 
-    <!-- script -->
-    <script src="./app/channels.js" type="module"></script>
-    
+    <!-- ! Top Navigation -->
+
+    <div class="top-navigation">
+      <i class="nav-icon title-hashtag fa-solid fa-hashtag text-red-400"></i>
+      <h5 class="title-text">tailwind</h5>
+      <span class="theme-icon">
+        <!-- Sun/Light -->
+        <i class="nav-icon fa-solid fa-sun"></i>
+        <!-- Moon/Dark -->
+        <!-- <i class="nav-icon fa-solid fa-moon-stars"></i> -->
+        <!-- Snow/Blue -->
+        <!-- <i class="nav-icon fa-solid fa-snowflake"></i> -->
+        <!-- Brown -->
+        <!-- <i class="nav-icon fa-solid fa-leaf-maple"></i>  -->
+      </span>
+      <div class="search">
+        <input type="text" placeholder="Search" class="search-input" />
+        <i class="nav-icon fa-solid fa-magnifying-glass"></i>
+      </div>
+      <i class="nav-icon fa-solid fa-bell"></i>
+      <i class="nav-icon fa-solid fa-user"></i>
+    </div>
   </body>
 </html>
