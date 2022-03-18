@@ -116,7 +116,7 @@ const extractNewHashtag = (input, addHashtag) => {
   if (name != "") {
     let elem = document.createElement("div");
     elem.innerHTML = `<div class="dropdown-selection">
-      <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
+      <i class="fa-solid fa-hashtag text-gray-400 p-1 mb-auto"></i>
       <h5 class="dropdown-selection-text">${name}</h5>
       </div>`;
     addHashtag.after(elem);

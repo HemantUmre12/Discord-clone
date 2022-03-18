@@ -6,7 +6,7 @@
   /* ! Nav Bar */
 
   .nav-container {
-    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col z-10 shadow-lg bg-gray-900 text-gray-300;
+    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col z-20 shadow-lg bg-gray-900 text-gray-300;
   }
 
   .sidebar-icon {
@@ -28,7 +28,7 @@
 
   .channel-bar {
     @apply w-60 h-screen m-0 ml-16 bg-gray-200 dark:bg-gray-800 fixed transition-all -translate-x-full origin-left duration-300
-    z-[-1] overflow-hidden;
+    z-10 overflow-hidden;
   }
 
   .channel-bar-show {
@@ -56,7 +56,7 @@
   }
 
   .dropdown-header-text {
-    @apply text-gray-500 font-semibold cursor-default;
+    @apply text-gray-500 font-semibold cursor-default text-lg;
   }
 
   .dropdown-header-text-selected {
@@ -79,12 +79,12 @@
 
   .plus-sign {
     @apply ml-auto cursor-pointer 
-    transition duration-300 ease-in-out 
+    transition duration-300 ease-in-out text-lg
     hover:text-pink-500;
   }
 
   .arrow-sign {
-    @apply text-opacity-80 my-auto mr-1 cursor-pointer
+    @apply text-opacity-80 my-auto mr-1 cursor-pointer text-lg
     transition duration-300 ease-in-out -rotate-90 hover:text-pink-500;
   }
 
@@ -117,8 +117,8 @@
 
   .top-navigation {
     @apply flex flex-row items-center justify-evenly 
-    bg-gray-300 relative
-    transition-all duration-300 -z-10
+    bg-gray-700 relative
+    transition-all duration-300 
     h-16
     ml-16 sm:ml-[19rem]
     shadow-lg;
@@ -126,43 +126,33 @@
 
   .nav-icon {
     @apply text-gray-500
-    mr-3 ml-4 text-xl
+    m-2 sm:m-3 text-lg sm:text-xl
     transition duration-300 ease-in-out 
     hover:text-pink-400 
     cursor-pointer;
   }
 
-  .nav-icon:first {
-    @apply ml-auto mr-4;
-  }
-
-  .title-hashtag {
-    @apply text-lg tracking-wider font-semibold text-gray-500 
-    ml-2 my-auto;
-  }
-
   .title-text {
-    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
-    mr-auto ml-2 my-auto 
+    @apply text-lg sm:text-xl text-gray-500 tracking-wider font-semibold
+    mr-auto my-auto 
     transition duration-300 ease-in-out;
   }
 
   .search {
-    @apply w-1/5 flex items-center justify-start 
-    bg-gray-400
+    @apply max-w-[10rem] flex items-center justify-center 
+    bg-gray-600
     text-gray-500
-    px-2 h-9 ml-0 mr-0 
+    pl-2 h-9 ml-0 mr-0 
     rounded-md shadow-md
     transition duration-300 ease-in-out;
   }
 
   .search-input {
     @apply w-full font-sans font-semibold
-    bg-transparent outline-none 
-    text-gray-500  placeholder-gray-500
+    bg-transparent outline-none
+    text-gray-200  placeholder-gray-500
     pl-1 rounded;
   }
-
 }
 
 @tailwind utilities;
