@@ -379,6 +379,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+  :root {
+    --color-text-base: #ffffff;
+    --color-text-muted: #6B7280;
+    --color-textarea-bg: #4f545c;
+    --color-primary-bg: #202225;
+    --color-secondary-bg: #2f3136;
+    --color-tertiary-bg: #36393F;
+    --color-main-theme: #22C55E;
+  }
 
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -435,11 +444,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
   width: 4rem;
   flex-direction: column;
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 34 37 / var(--tw-bg-opacity));
+  background-color: var(--color-primary-bg);
   padding: 0px;
-  --tw-text-opacity: 1;
-  color: rgb(227 229 232 / var(--tw-text-opacity));
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -456,12 +462,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   justify-content: center;
   border-radius: 1.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(47 49 54 / var(--tw-bg-opacity));
+  background-color: var(--color-secondary-bg);
   font-size: 1.25rem;
   line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
+  color: var(--color-main-theme);
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -472,18 +476,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .sidebar-icon:hover {
   border-radius: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: var(--color-main-theme);
+  color: var(--color-text-base);
 }
 .rotate-arrow {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: var(--color-main-theme);
+  color: var(--color-text-base);
 }
 .sidebar-tooltip {
   position: absolute;
@@ -498,14 +498,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 0.375rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 34 37 / var(--tw-bg-opacity));
+  background-color: var(--color-primary-bg);
   padding: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-base);
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -525,8 +523,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 237 239 / var(--tw-bg-opacity));
+  background-color: var(--color-tertiary-bg);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -534,8 +531,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (prefers-color-scheme: dark) {
 
   .channel-bar {
-    --tw-bg-opacity: 1;
-    background-color: rgb(47 49 54 / var(--tw-bg-opacity));
+    background-color: var(--color-secondary-bg);
   }
 }
 .channel-bar-show {
@@ -568,15 +564,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(79 84 92 / var(--tw-text-opacity));
-}
-@media (prefers-color-scheme: dark) {
-
-  .channel-block-text {
-    --tw-text-opacity: 1;
-    color: rgb(212 215 220 / var(--tw-text-opacity));
-  }
+  color: var(--color-text-muted);
 }
 .dropdown {
   margin: 0px;
@@ -596,16 +584,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
   flex-direction: row;
   align-items: center;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
 }
 .dropdown-header-text {
   cursor: default;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
 }
 .dropdown-header-text-selected {
   font-weight: 700;
@@ -632,8 +618,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.025em;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -641,8 +626,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .dropdown-selection-text:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: var(--color-main-theme);
 }
 .plus-sign {
   margin-left: auto;
@@ -656,8 +640,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .plus-sign:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: var(--color-main-theme);
 }
 .arrow-sign {
   margin-top: auto;
@@ -676,8 +659,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .arrow-sign:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: var(--color-main-theme);
 }
 .arrow-sign-click {
   --tw-rotate: 0deg;
@@ -708,14 +690,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   justify-content: space-evenly;
   border-radius: 0.375rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  background-color: var(--color-textarea-bg);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-base);
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -729,8 +709,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .content-container {
   position: relative;
   margin-left: 4rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(54 57 63 / var(--tw-bg-opacity));
+  background-color: var(--color-tertiary-bg);
 }
 @media (min-width: 768px) {
 
@@ -750,8 +729,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  --tw-bg-opacity: 1;
-  background-color: rgb(54 57 63 / var(--tw-bg-opacity));
+  background-color: var(--color-tertiary-bg);
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -764,8 +742,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -773,8 +750,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-icon:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: var(--color-main-theme);
 }
 @media (min-width: 640px) {
 
@@ -795,8 +771,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -819,11 +794,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   justify-content: center;
   border-radius: 0.375rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 84 92 / var(--tw-bg-opacity));
+  background-color: var(--color-textarea-bg);
   padding-left: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -846,36 +819,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.25rem;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(235 237 239 / var(--tw-text-opacity));
-}
-.search-input::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.search-input:-ms-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.search-input::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.search-input {
+  color: var(--color-text-base);
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 .search-input::-moz-placeholder {
   font-size: 1rem;
   line-height: 1.5rem;
+  color: var(--color-text-muted);
 }
 .search-input:-ms-input-placeholder {
   font-size: 1rem;
   line-height: 1.5rem;
+  color: var(--color-text-muted);
 }
 .search-input::placeholder {
   font-size: 1rem;
   line-height: 1.5rem;
+  color: var(--color-text-muted);
 }
 /* Content List */
 .content-list {
@@ -904,6 +865,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 91.666667%;
   flex-direction: column;
   justify-content: flex-start;
+  padding-right: 1.5rem;
 }
 .post-text {
   margin-right: auto;
@@ -913,16 +875,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 100;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-base);
 }
 .post-owner {
   margin-right: 0.5rem;
   cursor: pointer;
   text-align: left;
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: var(--color-text-base);
 }
 .avatar-wrapper {
   margin-left: 1rem;
@@ -968,8 +928,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(79 84 92 / var(--tw-text-opacity));
+  color: var(--color-text-muted);
 }
 .bottom-bar {
   margin-left: auto;
@@ -982,8 +941,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   justify-content: space-between;
   border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 84 92 / var(--tw-bg-opacity));
+  background-color: var(--color-textarea-bg);
   padding: 0.5rem;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -996,24 +954,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: text;
   background-color: transparent;
   font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(212 215 220 / var(--tw-text-opacity));
-}
-.bottom-bar-input::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.bottom-bar-input:-ms-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.bottom-bar-input::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-.bottom-bar-input {
+  color: var(--color-text-base);
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+.bottom-bar-input::-moz-placeholder {
+  color: var(--color-text-muted);
+}
+.bottom-bar-input:-ms-input-placeholder {
+  color: var(--color-text-muted);
+}
+.bottom-bar-input::placeholder {
+  color: var(--color-text-muted);
 }
 
 .relative {
@@ -1058,9 +1010,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(79 84 92 / var(--tw-bg-opacity));
 }
 
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(54 57 63 / var(--tw-bg-opacity));
+.bg-skin-tertiary {
+  background-color: var(--color-tertiary-bg);
 }
 
 .p-1 {
@@ -1087,16 +1038,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 ::-webkit-scrollbar-thumb {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-
-  ::-webkit-scrollbar-thumb {
-    --tw-bg-opacity: 1;
-    background-color: rgb(74 222 128 / var(--tw-bg-opacity));
-  }
+  background-color: var(--color-main-theme);
 }
 
 .group:hover .group-hover\:scale-100 {

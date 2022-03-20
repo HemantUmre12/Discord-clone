@@ -1,34 +1,56 @@
 @tailwind base;
 @tailwind components;
 
+@layer base {
+  :root {
+    --color-text-base: #ffffff;
+    --color-text-muted: #6B7280;
+    --color-textarea-bg: #4f545c;
+    --color-primary-bg: #202225;
+    --color-secondary-bg: #2f3136;
+    --color-tertiary-bg: #36393F;
+    --color-main-theme: #22C55E;
+  }
+
+  .theme-light {
+    --color-text-base: #ffffff;
+    --color-text-muted: #85F4FF;
+    --color-textarea-bg: #B8E4F0;
+    --color-primary-bg: #98BAE7;
+    --color-secondary-bg: #7267CB;
+    --color-tertiary-bg: #6E3CBC;
+    --color-main-theme: #ffffff;
+  }
+
+}
 
 @layer components {
 
   /* ! Nav Bar */
 
   .nav-container {
-    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col z-20 shadow-lg bg-gray-900 text-gray-300;
+    @apply fixed top-0 left-0 h-screen w-16 m-0 p-0 flex flex-col z-20 shadow-lg bg-skin-primary;
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 text-xl mx-auto shadow-lg bg-gray-800 text-green-500
-        hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 text-xl mx-auto shadow-lg bg-skin-secondary text-skin-main-theme
+        hover:bg-skin-main-theme hover:text-skin-base rounded-3xl hover:rounded-xl
         transition-all duration-300 ease-linear;
   }
 
   .rotate-arrow {
     @apply rotate-180
-    bg-green-600 text-white;
+    bg-skin-main-theme text-skin-base;
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-skin-base bg-skin-primary text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
 
   /* ! Channesl section */
 
   .channel-bar {
-    @apply w-60 h-screen m-0 ml-16 bg-gray-200 dark:bg-gray-800 fixed transition-all -translate-x-full origin-left duration-300
+    @apply w-60 h-screen m-0 ml-16 bg-skin-tertiary dark:bg-skin-secondary fixed transition-all -translate-x-full origin-left duration-300
     z-10 overflow-hidden;
   }
 
@@ -45,7 +67,7 @@
   }
 
   .channel-block-text {
-    @apply text-lg tracking-wider font-bold text-gray-600 dark:text-gray-400 mr-auto ml-4 my-auto align-middle;
+    @apply text-lg tracking-wider font-bold text-skin-muted mr-auto ml-4 my-auto align-middle;
   }
 
   .dropdown {
@@ -53,11 +75,11 @@
   }
 
   .dropdown-header {
-    @apply flex flex-row items-center mx-0 text-gray-500;
+    @apply flex flex-row items-center mx-0 text-skin-muted;
   }
 
   .dropdown-header-text {
-    @apply text-gray-500 font-semibold cursor-default text-lg;
+    @apply text-skin-muted font-semibold cursor-default text-base;
   }
 
   .dropdown-header-text-selected {
@@ -72,21 +94,21 @@
   }
 
   .dropdown-selection-text {
-    @apply text-gray-500 font-semibold tracking-wide
+    @apply text-skin-muted font-semibold tracking-wide
         mr-auto 
         transition duration-300 ease-in-out 
-        hover:text-green-600 cursor-pointer;
+        hover:text-skin-main-theme cursor-pointer;
   }
 
   .plus-sign {
     @apply ml-auto cursor-pointer 
     transition duration-300 ease-in-out text-lg
-    hover:text-green-600;
+    hover:text-skin-main-theme;
   }
 
   .arrow-sign {
     @apply text-opacity-80 my-auto mr-1 cursor-pointer text-lg
-    transition duration-300 ease-in-out -rotate-90 hover:text-green-600;
+    transition duration-300 ease-in-out -rotate-90 hover:text-skin-main-theme;
   }
 
   .arrow-sign-click {
@@ -103,7 +125,7 @@
   }
 
   .input-hashtag {
-    @apply cursor-text appearance-none bg-gray-500 rounded-md w-3/4 px-2 py-0.5 outline-none text-white flex flex-row items-center justify-evenly mr-auto;
+    @apply cursor-text appearance-none bg-skin-text-area rounded-md w-3/4 px-2 py-0.5 outline-none text-skin-base flex flex-row items-center justify-evenly mr-auto;
   }
 
   .hide {
@@ -118,7 +140,7 @@
 
   .content-container {
     @apply ml-16 md:ml-[19rem]
-    relative bg-gray-700;
+    relative bg-skin-tertiary;
   }
 
 
@@ -128,29 +150,29 @@
     @apply flex flex-row items-center justify-evenly 
     sticky w-full left-0 top-0
     transition-all duration-300 
-    bg-gray-700
+    bg-skin-tertiary
     h-14
     shadow-lg;
   }
 
   .nav-icon {
-    @apply text-gray-500
+    @apply text-skin-muted
     m-2 sm:m-3 text-lg sm:text-xl
     transition duration-300 ease-in-out 
-    hover:text-green-600
+    hover:text-skin-main-theme
     cursor-pointer;
   }
 
   .title-text {
-    @apply text-lg sm:text-xl text-gray-500 tracking-wider font-semibold
+    @apply text-lg sm:text-xl text-skin-muted tracking-wider font-semibold
     mr-auto my-auto 
     transition duration-300 ease-in-out;
   }
 
   .search {
     @apply max-w-[10rem] flex items-center justify-center 
-    bg-gray-600
-    text-gray-500
+    bg-skin-text-area
+    text-skin-muted
     pl-2 sm:h-9 h-7 mx-2 
     rounded-md shadow-md
     transition duration-300 ease-in-out;
@@ -159,7 +181,7 @@
   .search-input {
     @apply w-full font-sans font-semibold
     bg-transparent outline-none
-    text-gray-200  placeholder-gray-500
+    text-skin-base  placeholder:text-skin-muted
     pl-1 rounded
     placeholder:text-base;
   }
@@ -178,17 +200,17 @@
   }
 
   .post-content {
-    @apply w-11/12
+    @apply w-11/12 pr-6
     flex flex-col justify-start 
   }
 
   .post-text {
-    @apply text-base text-left text-white font-thin max-w-4xl
+    @apply text-base text-left text-skin-base font-thin max-w-4xl
     mr-auto whitespace-normal;
   }
 
   .post-owner {
-    @apply text-left font-semibold text-white mr-2 cursor-pointer;
+    @apply text-left font-semibold text-skin-base mr-2 cursor-pointer;
   }
 
   .avatar-wrapper {
@@ -205,14 +227,14 @@
   }
 
   .timestamp {
-    @apply text-xs text-left font-semibold text-gray-600 ml-2;
+    @apply text-xs text-left font-semibold text-skin-muted ml-2;
   }
 
   .bottom-bar {
     @apply flex flex-row items-center justify-between 
     mx-auto mb-4
     rounded-lg shadow-lg 
-    bg-gray-600 p-2
+    bg-skin-text-area p-2
     h-12 w-11/12;
   }
 
@@ -220,7 +242,7 @@
     @apply font-semibold w-full
     bg-transparent outline-none 
     ml-0 mr-auto
-    text-gray-400 placeholder-gray-500
+    text-skin-base placeholder:text-skin-muted
     cursor-text;
   }
 
@@ -233,5 +255,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-500 dark:bg-green-400;
+  @apply bg-skin-main-theme;
 }
