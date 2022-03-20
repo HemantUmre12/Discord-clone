@@ -15,17 +15,16 @@
     <script src="./app/show-channels.js" type="module" defer></script>
   </head>
 
-  <body>
+  <body class="relative bg-gray-600">
+    <!-- ! SIDEBAR -->
+
     <div class="flex">
-      <!-- !Side-Bar -->
-
-      <!-- ! Nav-Bar -->
-
       <div class="side-bar">
+        <!-- ! Nav-Bar -->
+
         <div class="nav-container">
-          <div class="sidebar-icon group sm:hidden channel-arrow">
+          <div class="sidebar-icon group md:hidden channel-arrow">
             <i class="fa-solid fa-angles-left"></i>
-            <!-- <span class="sidebar-tooltip group-hover:scale-100">Open💡</span> -->
           </div>
           <div class="sidebar-icon group">
             <i class="fa-solid fa-fire-flame-curved"></i>
@@ -47,12 +46,15 @@
       </div>
 
       <!-- ! Channels -->
-      <div class="channel-bar shadow-lg sm:translate-x-0">
+
+      <div class="channel-bar shadow-lg md:translate-x-0">
+        <!-- Heading -->
+
         <div class="channel-block">
           <h5 class="channel-block-text">Channels</h5>
         </div>
 
-        <!-- ! Drop-Down -->
+        <!-- Drop-Down -->
 
         <div class="channel-container">
           <!-- Topics -->
@@ -81,6 +83,7 @@
             </div>
 
             <!-- Added new dropdown-selection -->
+
             <div class="add-hashtag hide">
               <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
               <input type="text" class="input-hashtag" />
@@ -95,7 +98,9 @@
               <h5 class="dropdown-header-text">Maths 🤮</h5>
               <i class="fa-solid fa-plus plus-sign"></i>
             </div>
+
             <!-- Added new dropdown-selection -->
+
             <div class="add-hashtag hide">
               <i class="fa-solid fa-hashtag text-gray-400 p-1"></i>
               <input type="text" class="input-hashtag" />
@@ -105,27 +110,221 @@
       </div>
     </div>
 
-    <!-- ! Top Navigation -->
+    <!-- ! MAIN CONTENT -->
 
-    <div class="top-navigation">
-      <i class="nav-icon title-hashtag fa-solid fa-hashtag"></i>
-      <h5 class="title-text">tailwind</h5>
-      <span class="theme-icon ml-6">
-        <!-- Sun/Light -->
-        <i class="nav-icon fa-solid fa-sun"></i>
-        <!-- Moon/Dark -->
-        <!-- <i class="nav-icon fa-solid fa-moon-stars"></i> -->
-        <!-- Snow/Blue -->
-        <!-- <i class="nav-icon fa-solid fa-snowflake"></i> -->
-        <!-- Brown -->
-        <!-- <i class="nav-icon fa-solid fa-leaf-maple"></i>  -->
-      </span>
-      <div class="search">
-        <input type="text" placeholder="Search..." class="search-input" />
-        <i class="nav-icon fa-solid fa-magnifying-glass"></i>
+    <div class="content-container">
+      <!-- ! Top Navigation -->
+
+      <div class="top-navigation">
+        <i class="nav-icon title-hashtag fa-solid fa-hashtag"></i>
+        <h5 class="title-text">tailwind</h5>
+        <span class="theme-icon ml-6">
+          <!-- Sun/Light -->
+          <i class="nav-icon fa-solid fa-sun"></i>
+          <!-- Moon/Dark -->
+          <!-- <i class="nav-icon fa-solid fa-moon-stars"></i> -->
+          <!-- Snow/Blue -->
+          <!-- <i class="nav-icon fa-solid fa-snowflake"></i> -->
+          <!-- Brown -->
+          <!-- <i class="nav-icon fa-solid fa-leaf-maple"></i>  -->
+        </span>
+        <div class="search">
+          <input type="text" placeholder="Search..." class="search-input" />
+          <i class="nav-icon fa-solid fa-magnifying-glass"></i>
+        </div>
+        <i class="nav-icon fa-solid fa-bell"></i>
+        <i class="nav-icon fa-solid fa-user-group"></i>
       </div>
-      <i class="nav-icon fa-solid fa-bell"></i>
-      <i class="nav-icon fa-solid fa-user"></i>
+
+      <!-- ! Content-List -->
+
+      <div class="content-list">
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                Hemant
+                <small class="timestamp">yesterday</small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- Bot Post -->
+          <div class="post">
+            <!-- Avatar -->
+            <div class="avatar-wrapper">
+              <div class="avatar-container">
+                <i class="fa-brands fa-discord avatar"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="post-content">
+              <p class="post-owner">
+                <small class="timestamp"></small>
+              </p>
+              <p class="post-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                ducimus, debitis quod nisi totam voluptatum eligendi porro culpa
+                in excepturi, quo atque pariatur quos itaque autem neque
+                recusandae repellendus voluptatem?
+              </p>
+            </div>
+          </div>
+          <!-- ! Bottom Input Bar -->
+  
+          <div class="bg-gray-700 sticky right-10 bottom-0">
+            <div class="bottom-bar">
+              <div class="sidebar-icon w-10 h-10 p-2">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <input
+                type="text"
+                placeholder="Enter message..."
+                class="bottom-bar-input"
+              />
+            </div>
+          
+            
+        </div>
+      </div>
     </div>
   </body>
 </html>

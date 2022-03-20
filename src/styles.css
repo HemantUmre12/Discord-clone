@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 
+
 @layer components {
 
   /* ! Nav Bar */
@@ -74,18 +75,18 @@
     @apply text-gray-500 font-semibold tracking-wide
         mr-auto 
         transition duration-300 ease-in-out 
-        hover:text-pink-500 cursor-pointer;
+        hover:text-green-600 cursor-pointer;
   }
 
   .plus-sign {
     @apply ml-auto cursor-pointer 
     transition duration-300 ease-in-out text-lg
-    hover:text-pink-500;
+    hover:text-green-600;
   }
 
   .arrow-sign {
     @apply text-opacity-80 my-auto mr-1 cursor-pointer text-lg
-    transition duration-300 ease-in-out -rotate-90 hover:text-pink-500;
+    transition duration-300 ease-in-out -rotate-90 hover:text-green-600;
   }
 
   .arrow-sign-click {
@@ -113,14 +114,22 @@
     @apply pointer-events-none;
   }
 
+  /* MAIN CONTENT */
+
+  .content-container {
+    @apply ml-16 md:ml-[19rem]
+    relative bg-gray-700;
+  }
+
+
   /* Top Navigation */
 
   .top-navigation {
     @apply flex flex-row items-center justify-evenly 
-    bg-gray-700 relative
+    sticky w-full left-0 top-0
     transition-all duration-300 
-    h-16
-    ml-16 sm:ml-[19rem]
+    bg-gray-700
+    h-14
     shadow-lg;
   }
 
@@ -128,7 +137,7 @@
     @apply text-gray-500
     m-2 sm:m-3 text-lg sm:text-xl
     transition duration-300 ease-in-out 
-    hover:text-pink-400 
+    hover:text-green-600
     cursor-pointer;
   }
 
@@ -142,7 +151,7 @@
     @apply max-w-[10rem] flex items-center justify-center 
     bg-gray-600
     text-gray-500
-    pl-2 h-9 ml-0 mr-0 
+    pl-2 sm:h-9 h-7 mx-2 
     rounded-md shadow-md
     transition duration-300 ease-in-out;
   }
@@ -151,8 +160,70 @@
     @apply w-full font-sans font-semibold
     bg-transparent outline-none
     text-gray-200  placeholder-gray-500
-    pl-1 rounded;
+    pl-1 rounded
+    placeholder:text-base;
   }
+
+  /* Content List */
+
+  .content-list {
+    @apply flex flex-col
+    h-full w-full m-0 p-0
+    transition-all duration-300 ease-in;
+  }
+
+  .post {
+    @apply w-full
+    flex flex-row items-center justify-evenly py-4
+  }
+
+  .post-content {
+    @apply w-11/12
+    flex flex-col justify-start 
+  }
+
+  .post-text {
+    @apply text-base text-left text-white font-thin max-w-4xl
+    mr-auto whitespace-normal;
+  }
+
+  .post-owner {
+    @apply text-left font-semibold text-white mr-2 cursor-pointer;
+  }
+
+  .avatar-wrapper {
+    @apply
+    max-w-xs mx-4 sm:mx-7
+    text-center mb-auto;
+  }
+
+  .avatar-container {
+    @apply w-10 h-10 sm:w-12 sm:h-12 
+    rounded-full
+    bg-blue-500 flex items-center justify-center
+    text-xl text-white
+  }
+
+  .timestamp {
+    @apply text-xs text-left font-semibold text-gray-600 ml-2;
+  }
+
+  .bottom-bar {
+    @apply flex flex-row items-center justify-between 
+    mx-auto mb-4
+    rounded-lg shadow-lg 
+    bg-gray-600 p-2
+    h-12 w-11/12;
+  }
+
+  .bottom-bar-input {
+    @apply font-semibold w-full
+    bg-transparent outline-none 
+    ml-0 mr-auto
+    text-gray-400 placeholder-gray-500
+    cursor-text;
+  }
+
 }
 
 @tailwind utilities;
