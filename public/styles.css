@@ -409,7 +409,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     --color-main-theme: #ffffff;
   }
 
-  .theme-hallowin {
+  /* .theme-hallowin {
     --color-text-base: #ffffff;
     --color-text-muted: #6B7280;
     --color-textarea-bg: #991700;
@@ -417,7 +417,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     --color-secondary-bg: #4d0c00;
     --color-tertiary-bg: #660f00;
     --color-main-theme: #22C55E;
-  }
+  } */
 
 *, ::before, ::after {
   --tw-translate-x: 0;
