@@ -12,16 +12,35 @@
     --color-main-theme: #22C55E;
   }
 
-  .theme-light {
-    --color-text-base: #ffffff;
-    --color-text-muted: #85F4FF;
-    --color-textarea-bg: #B8E4F0;
-    --color-primary-bg: #98BAE7;
-    --color-secondary-bg: #7267CB;
-    --color-tertiary-bg: #6E3CBC;
+  .theme-summer {
+    --color-text-base: #4f545c;
+    --color-text-muted: #4f545c;
+    --color-textarea-bg: #d4d7dc;
+    --color-primary-bg: #ffffff;
+    --color-secondary-bg: #ebedef;
+    --color-tertiary-bg: #e3e5e8;
+    --color-main-theme: #eb3862;
+  }
+
+  .theme-winter {
+    --color-text-base: #0647a1;
+    --color-text-muted: #0647a1;
+    --color-textarea-bg: #d2fcf9;
+    --color-primary-bg: #42C2FF;
+    --color-secondary-bg: #85F4FF;
+    --color-tertiary-bg: #B8FFF9;
     --color-main-theme: #ffffff;
   }
 
+  /* .theme-hallowin {
+    --color-text-base: #ffffff;
+    --color-text-muted: #6B7280;
+    --color-textarea-bg: #991700;
+    --color-primary-bg: #330800;
+    --color-secondary-bg: #4d0c00;
+    --color-tertiary-bg: #660f00;
+    --color-main-theme: #22C55E;
+  } */
 }
 
 @layer components {
@@ -34,13 +53,13 @@
 
   .sidebar-icon {
     @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 text-xl mx-auto shadow-lg bg-skin-secondary text-skin-main-theme
-        hover:bg-skin-main-theme hover:text-skin-base rounded-3xl hover:rounded-xl
-        transition-all duration-300 ease-linear;
+    hover:bg-skin-main-theme hover:text-skin-primary rounded-3xl hover:rounded-xl
+    transition-all duration-300 ease-linear;
   }
 
   .rotate-arrow {
     @apply rotate-180
-    bg-skin-main-theme text-skin-base;
+    bg-skin-main-theme text-skin-primary;
   }
 
   .sidebar-tooltip {
@@ -127,25 +146,20 @@
   .input-hashtag {
     @apply cursor-text appearance-none bg-skin-text-area rounded-md w-3/4 px-2 py-0.5 outline-none text-skin-base flex flex-row items-center justify-evenly mr-auto;
   }
-
-  .hide {
-    @apply hidden;
-  }
-
+  
   .cancel-hover {
     @apply pointer-events-none;
   }
 
   /* MAIN CONTENT */
-
+  
   .content-container {
     @apply ml-16 md:ml-[19rem]
     relative bg-skin-tertiary;
   }
-
-
+  
   /* Top Navigation */
-
+  
   .top-navigation {
     @apply flex flex-row items-center justify-evenly 
     sticky w-full left-0 top-0
@@ -154,7 +168,7 @@
     h-14
     shadow-lg;
   }
-
+  
   .nav-icon {
     @apply text-skin-muted
     m-2 sm:m-3 text-lg sm:text-xl
@@ -168,7 +182,7 @@
     mr-auto my-auto 
     transition duration-300 ease-in-out;
   }
-
+  
   .search {
     @apply max-w-[10rem] flex items-center justify-center 
     bg-skin-text-area
@@ -177,7 +191,7 @@
     rounded-md shadow-md
     transition duration-300 ease-in-out;
   }
-
+  
   .search-input {
     @apply w-full font-sans font-semibold
     bg-transparent outline-none
@@ -185,51 +199,51 @@
     pl-1 rounded
     placeholder:text-base;
   }
-
+  
   /* Content List */
-
+  
   .content-list {
     @apply flex flex-col
     h-full w-full m-0 p-0
     transition-all duration-300 ease-in;
   }
-
+  
   .post {
     @apply w-full
     flex flex-row items-center justify-evenly py-4
   }
-
+  
   .post-content {
     @apply w-11/12 pr-6
     flex flex-col justify-start 
   }
-
+  
   .post-text {
-    @apply text-base text-left text-skin-base font-thin max-w-4xl
+    @apply text-base text-left text-skin-base max-w-4xl
     mr-auto whitespace-normal;
   }
-
+  
   .post-owner {
     @apply text-left font-semibold text-skin-base mr-2 cursor-pointer;
   }
-
+  
   .avatar-wrapper {
     @apply
     max-w-xs mx-4 sm:mx-7
     text-center mb-auto;
   }
-
+  
   .avatar-container {
     @apply w-10 h-10 sm:w-12 sm:h-12 
     rounded-full
     bg-blue-500 flex items-center justify-center
     text-xl text-white
   }
-
+  
   .timestamp {
     @apply text-xs text-left font-semibold text-skin-muted ml-2;
   }
-
+  
   .bottom-bar {
     @apply flex flex-row items-center justify-between 
     mx-auto mb-4
@@ -237,13 +251,17 @@
     bg-skin-text-area p-2
     h-12 w-11/12;
   }
-
+  
   .bottom-bar-input {
     @apply font-semibold w-full
     bg-transparent outline-none 
     ml-0 mr-auto
     text-skin-base placeholder:text-skin-muted
     cursor-text;
+  }  
+
+  .hide {
+    @apply hidden invisible before:hidden;
   }
 
 }

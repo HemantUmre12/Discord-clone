@@ -1,4 +1,4 @@
-import { $, $$ } from "./utiliti.js";
+import { $$ } from "./utiliti.js";
 
 const arrowSign = $$(".arrow-sign");
 const plusSign = $$(".plus-sign");

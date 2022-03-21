@@ -29,6 +29,7 @@ module.exports = {
           base: 'var(--color-text-base)',
           muted: 'var(--color-text-muted)',
           'main-theme': 'var(--color-main-theme)',
+          'primary': 'var(--color-primary-bg)'
         }
       },
       backgroundColor: {
