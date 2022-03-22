@@ -23,7 +23,7 @@
   }
 
   .theme-winter {
-    --color-text-base: #0647a1;
+    --color-text-base: #0043a1;
     --color-text-muted: #0647a1;
     --color-textarea-bg: #d2fcf9;
     --color-primary-bg: #42C2FF;
@@ -224,7 +224,7 @@
   }
   
   .post-owner {
-    @apply text-left font-semibold text-skin-base mr-2 cursor-pointer;
+    @apply text-left font-bold text-skin-base mr-2 cursor-pointer;
   }
   
   .avatar-wrapper {
@@ -238,6 +238,15 @@
     rounded-full
     bg-blue-500 flex items-center justify-center
     text-xl text-white
+  }
+
+  .avatar {
+    @apply flex-none
+    w-12 h-full 
+    rounded-full shadow-md
+    object-cover bg-gray-100 
+    mb-auto mt-0 mx-0 
+    cursor-pointer;
   }
   
   .timestamp {
@@ -254,11 +263,11 @@
   
   .bottom-bar-input {
     @apply font-semibold w-full
-    bg-transparent outline-none 
-    ml-0 mr-auto
-    text-skin-base placeholder:text-skin-muted
+    bg-transparent outline-none
+    pl-2
+    text-skin-base placeholder:text-skin-muted placeholder:text-base
     cursor-text;
-  }  
+  }
 
   .hide {
     @apply hidden invisible before:hidden;
